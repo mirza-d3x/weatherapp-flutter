@@ -12,5 +12,6 @@ Future<DataModel> fetchWeather(String CityName) async {
   print(result.statusCode);
   print("https://weatherapi-com.p.rapidapi.com/current.json?q="+ CityName);
   print(result.body);
+
   return DataModel.fromJson(json.decode(result.body));
 }
